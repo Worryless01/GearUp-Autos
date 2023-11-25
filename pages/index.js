@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import Aos from "aos";
@@ -29,7 +29,9 @@ const index = () => {
       </nav>
       <div className="hero">
         <div className="auto">
-          <div className="jeeper"><img src="about.png" alt="jeep" data-aos="slide-right" /></div>
+          <div className="jeeper">
+            <img src="about.png" alt="jeep" data-aos="slide-right" />
+          </div>
           <div className="download" data-aos="fade-down">
             <p>
               Explore a diverse range of premium vehicles at our car sales
@@ -48,26 +50,27 @@ const index = () => {
           <h2>Sign Up</h2>
           <div className="info">
             <label htmlFor="fn">First name</label>
-            <input type="text"  placeholder="First name" required/>
+            <input type="text" placeholder="First name" required />
             <label htmlFor="ln">Last name</label>
-            <input type="text"  placeholder="Last name" required/>
+            <input type="text" placeholder="Last name" required />
             <label htmlFor="email">Email</label>
-            <input type="email" name="" id="" placeholder="Email" required/>
+            <input type="email" name="" id="" placeholder="Email" required />
             <label htmlFor="phone">Phone number</label>
             <input type="text" required />
             <label htmlFor="pass">Password</label>
             <input type="password" placeholder="Password" required />
           </div>
           <div className="check">
-            <input type="checkbox" name="" id="" required/>
+            <input type="checkbox" name="" id="" required />
             <p>
               Yes, I would like to hear about GearUp Autos exclusive deals and
               discounts
             </p>
           </div>
           <div className="check-btn">
-            <Link href="/Home"></Link>
-            <button>Create Account</button>
+            <Link href="/Home">
+              <button>Create Account</button>
+            </Link>
           </div>
           <div className="bar">
             <p>

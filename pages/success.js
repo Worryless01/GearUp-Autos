@@ -24,7 +24,7 @@ const Success = () => {
             <p className='email-msg'>Check your email inbox for the receipt.</p>
             <p className='description'>
                 If you have any questions please email
-                <a className='email' href='mailto:swiftstore@gmail.com'>swiftstore@gmail.com</a>
+                <a className='email' href='mailto:GearUpAutos@gmail.com'>GearUpAutos@gmail.com</a>
             </p>
             <Link href='/'>
                 <button type='button' className='btn' width="300px" >
