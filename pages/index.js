@@ -70,7 +70,7 @@ const index = () => {
               value={firstName}
               onChange={(e) => setName(e.target.value)}
               placeholder="First name"
-              autoFocus
+              required
             />
             <label htmlFor="ln">Last name</label>
             <input type="text" placeholder="Last name" />
@@ -82,7 +82,7 @@ const index = () => {
             <input type="password" placeholder="Password" required />
           </div>
           <div className="check">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="" required/>
             <p>
               Yes, I would like to hear about GearUp Autos exclusive deals and
               discounts

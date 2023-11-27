@@ -825,17 +825,7 @@ a {
 .menu{
   display: none;
 }
-/* 
-.btns button{
-  cursor: pointer;
-  padding: 13px 25px;
-  border-radius: 0.5rem;
-  border: none;
-  background: #474fa0;
-  color:  white;
-  font-weight: 750;
-  text-transform: capitalize;
-} */
+
 .btns span h1{
   color: #444;
   font-size: 18px;
