@@ -10,6 +10,7 @@ export const StateContext = ({children}) =>{
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalQuantities, settotalQuantities] = useState(0)
     const [qty, setQty] = useState(1)
+    const [firstName, setName] = useState(null)
 
     let foundProduct
     let index
@@ -58,6 +59,7 @@ export const StateContext = ({children}) =>{
         }
     }
 
+
     const incQty = () =>{
         setQty((prevQty) => prevQty +1)
     }
@@ -84,11 +86,13 @@ export const StateContext = ({children}) =>{
             onRemove,
             setCartItems,
             setTotalPrice,
-            settotalQuantities
+            settotalQuantities,
+            firstName,
+            setName,
         }}
         >
             {children}
         </Context.Provider>
     )
 }
-export const useStateContext =() => useContext(Context)
+export const useStateContext = () => useContext(Context)

@@ -817,15 +817,15 @@ a {
 }
 
 .header .btns{
-  margin: auto 0;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
 .menu{
   display: none;
 }
-
+/* 
 .btns button{
   cursor: pointer;
   padding: 13px 25px;
@@ -835,12 +835,16 @@ a {
   color:  white;
   font-weight: 750;
   text-transform: capitalize;
+} */
+.btns span h1{
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
-
-.btns .btn2:hover{
-  background: var(--main-color)
+.btn1 .rx{
+  font-size: 22px;
 }
-
 .btns .btn1{
   background: transparent;
   color: #444;

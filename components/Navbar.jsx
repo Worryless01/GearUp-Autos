@@ -7,6 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { RxAvatar } from "react-icons/rx";
 const Navbar = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -34,7 +35,7 @@ const Navbar = () => {
     },
   ];
 
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showCart, setShowCart, totalQuantities, firstName } = useStateContext();
   const [view, setView] = useState(false);
 
   const HandleMenu = () => {
@@ -77,12 +78,12 @@ const Navbar = () => {
                 ))}
               </ul> 
         <div className="btns">
-          <button className="btn1" data-aos="fade-up-left">
-            sign in
-          </button>
-          <button className="btn2" data-aos="fade-up-right">
-            sign Up
-          </button>
+          <span className="btn1" data-aos="fade-up-left">
+            <RxAvatar className="rx"/>
+          </span>
+          <span className="btn2" data-aos="fade-up-right">
+            {firstName && <h1>Hello {firstName}</h1>}
+          </span>
         </div>
         <GiHamburgerMenu onClick={HandleMenu} className="menu" />
       </div>

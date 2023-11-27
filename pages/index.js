@@ -4,8 +4,17 @@ import React, { useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useStateContext } from "@/context/SateContext";
 
 const index = () => {
+  const { firstName, setName } = useStateContext();
+
+  // const submitForm =(e) => {
+  //   e.preventDefault()
+  //   location.assign('/Home')
+  //   setName(firstName)
+  // }
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -46,22 +55,34 @@ const index = () => {
             <img src="ios.png" alt="app" />
           </div>
         </div>
-        <form className="form-container" data-aos="fade-down">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="form-container"
+          data-aos="fade-down"
+        >
           <h2>Sign Up</h2>
           <div className="info">
-            <label htmlFor="fn">First name</label>
-            <input type="text" placeholder="First name" required />
+            <label htmlFor="fn" className="firstName">
+              First name
+            </label>
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="First name"
+              autoFocus
+            />
             <label htmlFor="ln">Last name</label>
-            <input type="text" placeholder="Last name" required />
+            <input type="text" placeholder="Last name" />
             <label htmlFor="email">Email</label>
-            <input type="email" name="" id="" placeholder="Email" required />
+            <input type="email" name="" id="" placeholder="Email" />
             <label htmlFor="phone">Phone number</label>
-            <input type="text" required />
+            <input type="text" />
             <label htmlFor="pass">Password</label>
             <input type="password" placeholder="Password" required />
           </div>
           <div className="check">
-            <input type="checkbox" name="" id="" required />
+            <input type="checkbox" name="" id="" />
             <p>
               Yes, I would like to hear about GearUp Autos exclusive deals and
               discounts
